@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tenant">
+<uses-permission android:name="android.permission.CALL_PHONE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app3"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app3"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Tenant">
+        <activity
+            android:name=".AddTenant"
+            android:label="@string/title_activity_add_tenant"
+            android:theme="@style/Theme.Tenant.NoActionBar"
+            android:parentActivityName=".MainActivity"
+        />
+
+
+        <activity
+            android:name=".Tenant_Detail"
+            android:label="@string/title_activity_tenant_detail"
+            android:theme="@style/Theme.Tenant.NoActionBar"
+            android:parentActivityName=".MainActivity"/>
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.tenant.MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Tenant.NoActionBar"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
