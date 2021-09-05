@@ -34,7 +34,7 @@ public class AddTenant extends AppCompatActivity {
 
         binding.addButton.setOnClickListener(v -> {
             MyDatabaseHelper myDb = new MyDatabaseHelper(AddTenant.this);
-            myDb.addTenant(binding.editTextTextPersonName.getText().toString().trim(), parseInt(binding.editTextTextBalance.getText().toString()), parseInt(binding.editTextTextCell.getText().toString().trim()));
+            myDb.addTenant(binding.editTextTextPersonName.getText().toString().trim(), parseInt(binding.editTextTextBalance.getText().toString()), binding.editTextTextCell.getText().toString().trim());
 //
 //
           Intent intent =new Intent (AddTenant.this, MainActivity.class);

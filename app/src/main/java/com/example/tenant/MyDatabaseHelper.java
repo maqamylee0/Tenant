@@ -34,7 +34,7 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
                         " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                         COLUMN_NAME + " TEXT, " +
                         COLUMN_BALANCE + " INTEGER, " +
-                        COLUMN_CELL + " INTEGER, " +
+                        COLUMN_CELL + " TEXT, " +
                         COLUMN_AMOUNT + " INTEGER );";
              db.execSQL(query);
     }
@@ -44,7 +44,7 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
          db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
          onCreate(db);
     }
-    public void addTenant(String name,int balance, int cell){
+    public void addTenant(String name,int balance, String cell){
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(COLUMN_NAME, name);

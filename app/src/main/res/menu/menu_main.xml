@@ -8,11 +8,11 @@
         android:title="@string/action_settings"
         app:showAsAction="never"
         android:icon="@drawable/ic_settings"/>
-    <item
-        android:id="@+id/action_deleteAll"
-        android:orderInCategory="100"
-        android:title="@string/action_deleteAll"
-        app:showAsAction="always"
+<!--    <item-->
+<!--        android:id="@+id/action_deleteAll"-->
+<!--        android:orderInCategory="100"-->
+<!--        android:title="@string/action_deleteAll"-->
+<!--        app:showAsAction="always"-->
         android:icon="@drawable/ic_delete"/>
     <item
         android:id="@+id/action_mainpage"

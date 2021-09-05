@@ -130,7 +130,7 @@ public class Tenant_Detail extends AppCompatActivity {
             binding.textViewName.setText(tenant_name);
             String amount="Amount due:" + tenant_balance;
             binding.textViewAmount.setText(amount);
-             String cell= "Phone Number : 0" + tenant_cell;
+             String cell= "Phone Number : " + tenant_cell;
             binding.textViewCell.setText(cell);
 
         }else{
@@ -179,20 +179,21 @@ public class Tenant_Detail extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_deleteAll ) {
-            Toast.makeText(this, "Deleted All", Toast.LENGTH_SHORT).show();
-            MyDatabaseHelper myDb= new MyDatabaseHelper(Tenant_Detail.this);
+        if (id == R.id.action_mainpage ) {
+            Toast.makeText(this, "Deleted ", Toast.LENGTH_SHORT).show();
+            MyDatabaseHelper myDb = new MyDatabaseHelper(Tenant_Detail.this);
 
-            myDb.deleteAll();
-            Intent intent =new Intent (Tenant_Detail.this, MainActivity.class);
+            //myDb.deleteAll();
+            Intent intent = new Intent(Tenant_Detail.this, MainActivity.class);
             startActivity(intent);
             finish();
-            return true;
-        }else if(id == R.id.action_mainpage) {
-            Intent intent =new Intent (Tenant_Detail.this, MainActivity.class);
-            startActivity(intent);
-
         }
+
+//        }else if(id == R.id.action_mainpage) {
+//            Intent intent =new Intent (Tenant_Detail.this, MainActivity.class);
+//            startActivity(intent);
+//
+//        }
 
         return super.onOptionsItemSelected(item);
     }
